@@ -216,7 +216,7 @@ deploy-production:
   before_script:
     - echo "====== Deploy to production server ======"
     - eval "$(ssh-agent -s)"
-    - echo "$TARGET_SERVER_SECRET_KEY_BASE64" | tr -d '\r' | ssh-add - > /dev/null
+    - echo "$TARGET_SERVER_SECRET_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - ssh-add -l
     # Install pm2:
     - npm i -g pm2
