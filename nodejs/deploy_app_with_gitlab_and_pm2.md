@@ -200,13 +200,13 @@ Go to [gitlab.com](https:/gitlab.com) -> Your project -> "Settings" -> "CI/CD" -
 Add some variables:
 
 | Variable                        | Description                                              |
-|---------------------------------|----------------------------------------------------------|                         |
+|---------------------------------|----------------------------------------------------------|
 | TARGET_SERVER_SECRET_KEY | Base64 encoded private RSA key to login target server. Make it protected |
 
 ### 3. Create file `.gitlab-ci.yml` in root directory of project:
 
 ```yaml
-mage: node:latest
+image: node:latest
 
 stages:
   - deploy
